@@ -7,9 +7,17 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Node modules
 node_modules
+
+# Distribution directories
 dist
 dist-ssr
+
+# Environment files
+*.env
+
+# Local environment files
 *.local
 
 # Editor directories and files
@@ -22,4 +30,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-.env
+
+# Additional OS or editor-specific files
+Thumbs.db
+ehthumbs.db
+*.DS_Store
+._*
+.Spotlight-V100
+.Trashes
