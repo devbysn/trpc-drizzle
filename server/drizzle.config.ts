@@ -6,7 +6,7 @@ export default defineConfig({
     dialect: 'postgresql',
     out: "./drizzle/migrations",
     dbCredentials:{
-        url: "postgresql://postgres:dev123@localhost:5432/trpc_app" as string
+        url: process.env.DATABASE_URL as string
     },
     schema : "./drizzle/schema.ts",
     migrations:{
@@ -16,21 +16,3 @@ export default defineConfig({
     verbose: true,
     strict: true
 })
-
-
-
-// export default defineConfig({
-//     // schema: "./drizzle/schema.ts",
-//     // out: "./drizzle/migrations",
-//     // driver: 'pg',
-//     dialect: 'postgresql,'
-//     dbCredentials:{
-//         url: process.env.DATABASE_URL as string
-//     },
-//     migrations:{
-//         schema: "public",
-//         table: "migrations"
-//     },
-//     verbose: true,
-//     strict: true
-// })
